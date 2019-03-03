@@ -24,7 +24,7 @@ layout: default
               {% endfor %}
             <h5 class="card-title">{{ control.TITLE}}</h5>
             <p class="card-text small">{{ control.ControlText | truncate 50 }}</p>
-            <h6>Enhancements</h6>
+            <h6 class="primary">Enhancements</h6>
             <ul>
             {% assign enc_counter = 0 %}
             {% for enc in control.Enhancements | limit: 3 %}
