@@ -2,13 +2,20 @@
 layout: default
 ---
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
+
+      <div class="col-4">
+          {% include nav.html %}  
+        </div>
+        <div class="col-8">
+
+
       {% assign control_counter = 0 %}
 
         {% for control in site.data.fedramp_controls["Controls"] %}
-
-        <div class="card" style="width: 18rem;">
+        {% assign control_anchor = "control_section_" | append: control.ID | replace: "-", "" %}
+        <div class="card" id="{{ control_anchor }}">
           <div class="card-body">
               {% for imp in control.Impacts %}
                 {% if imp == "High" %}
@@ -22,9 +29,9 @@ layout: default
                 {% endif %}
 
               {% endfor %}
-            <h5 class="card-title">{{ control.TITLE}}</h5>
-            <p class="card-text small">{{ control.ControlText | truncate 50 }}</p>
-            <h6 class="primary">Enhancements</h6>
+            <h5 class="card-title">{{ control.ID}} - {{ control.TITLE}}</h5>
+            <p class="card-text small">{{ control.ControlText }}</p>
+            <h6>Enhancements</h6>
             <ul>
             {% assign enc_counter = 0 %}
             {% for enc in control.Enhancements | limit: 3 %}
@@ -58,9 +65,11 @@ layout: default
           </ul>
 
           </div>
+          <a href="#">Back to top</a>
         </div>
 
         {% endfor %}    
+      </div>
 
   </div>
 </div>
