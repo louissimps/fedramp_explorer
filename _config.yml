@@ -1,13 +1,13 @@
-# Site settings
-title: FEDRAmp Explorer
-email:
-author: Louie Simpson
-description: an explorer for fedramp controls on a static site
-url:
+title: FEDRamp Controls Explorer
 
-# Build settings
-permalink: :title/
+page_gen-dirs: true # uncomment, if you prefer to generate named folders
+
+page_gen:
+  - data: 'controls'
+    template: 'control'
+    name: 'TITLE'
+    dir: 'controls'
+
+
 sass:
   sass_dir: css
-
-
