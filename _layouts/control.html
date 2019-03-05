@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<h2>{{ page.TITLE }}</h2>
+
+
+<div class="card">
+        <h5 class="card-header">{{ page.ID }}
+                {% for imp in page.Impacts %}
+                {% if imp == "High" %}
+                <span class="badge badge-pill badge-danger">H</span>
+                {% elsif imp == "Moderate" %}
+                <span class="badge badge-pill badge-warning">M</span>
+                
+                {% elsif imp == "Low" %}
+                <span class="badge badge-pill badge-success">L</span>
+                
+                {% endif %}
+                
+                {% endfor %}
+
+        </h5>
+        <div class="card-body">
+          <h5 class="card-title">Description:</h5>
+          <p class="card-text">{{ page.ControlText }}</p>
+
+          {% if page.FedrampGuidance != empty %}
+          <h5 class="card-title">Further Guidance</h5>
+          <p class="card-text">{{ page.FedrampGuidance }}</p>
+          
+          {% endif %}
+
+
+
+          <h5 class="card-title">Enhancements:</h5>
+          {% if page.Enhancements.size > 0 %}
+          {% for enc in page.Enhancements %}
+          <div class="card">
+                <h6 class="card-header">{{ enc.ID }}
+                        {% for imp in enc.Impacts %}
+                        {% if imp == "High" %}
+                        <span class="badge badge-pill badge-danger">H</span>
+                        {% elsif imp == "Moderate" %}
+                        <span class="badge badge-pill badge-warning">M</span>
+                        
+                        {% elsif imp == "Low" %}
+                        <span class="badge badge-pill badge-success">L</span>
+                        {% endif %}
+                        {% endfor %}</h6>
+                <div class="card-body">
+                    <p class="card-text">{{enc.ControlText}}</p>
+                    {% if enc.FedrampGuidance != empty %}
+                    <h6 class="card-title">Further Guidance</h6>
+                    <p class="card-text">{{ enc.FedrampGuidance }}</p>
+                    
+                    {% endif %}
+          
+                </div>
+        </div>
+
+
+          
+          
+
+          {% endfor %}                     
+
+          {% else %}
+            <p>N/A</p>
+          {% endif %}
+        </div>
+      </div>
+    
+

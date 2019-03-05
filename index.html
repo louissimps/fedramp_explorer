@@ -1,75 +1,11 @@
 ---
+title: DataGen Demo
 layout: default
 ---
-
-<div class="container-fluid">
-  <div class="row">
-
-      <div class="col-4">
-          {% include nav.html %}  
-        </div>
-        <div class="col-8">
-
-
-      {% assign control_counter = 0 %}
-
-        {% for control in site.data.fedramp_controls["Controls"] %}
-        {% assign control_anchor = "control_section_" | append: control.ID | replace: "-", "" %}
-        <div class="card" id="{{ control_anchor }}">
-          <div class="card-body">
-              {% for imp in control.Impacts %}
-                {% if imp == "High" %}
-                <span class="badge badge-pill badge-danger">H</span>
-                {% elsif imp == "Moderate" %}
-                <span class="badge badge-pill badge-warning">M</span>
-                
-                {% elsif imp == "Low" %}
-                <span class="badge badge-pill badge-success">L</span>
-                
-                {% endif %}
-
-              {% endfor %}
-            <h5 class="card-title">{{ control.ID}} - {{ control.TITLE}}</h5>
-            <p class="card-text small">{{ control.ControlText }}</p>
-            <h6>Enhancements</h6>
-            <ul>
-            {% assign enc_counter = 0 %}
-            {% for enc in control.Enhancements | limit: 3 %}
-              {% assign card_id = 'card_' | append: control_counter | append: enc_counter %}
-              
-              
-              <li><span class="small" ><a href="#"  data-toggle="collapse" data-target="#{{ card_id }}" >{{ enc.ID }}</a></span>
-                <div class="collapse" id="{{ card_id }}">
-                  <div class="card card-body small">
-                    {{ enc.ControlText }}
-                  </div>
-                </div>
-                {% for imp in enc.Impacts %}
-                {% if imp == "High" %}
-                <span class="badge badge-pill badge-danger small">H</span>
-                {% elsif imp == "Moderate" %}
-                <span class="badge badge-pill badge-warning">M</span>
-                
-                {% elsif imp == "Low" %}
-                <span class="badge badge-pill badge-success">L</span>
-                
-                {% endif %}
-              {% assign enc_counter = enc_counter | plus:1 %}
-              {% endfor %}
-
-            </li>
-            {% assign control_counter = control_counter | plus:1 %}
-
-            {% endfor %}
-
-          </ul>
-
-          </div>
-          <a href="#">Back to top</a>
-        </div>
-
-        {% endfor %}    
-      </div>
-
-  </div>
-</div>
+Aaron's Text for intro would go here.
+<!-- 
+<ul>
+{% for control in site.data.controls %}
+    <li><a href="{{ control.TITLE | datapage_url: 'controls' }}">{{ control.TITLE }}</a></li>
+{% endfor %}
+</ul> -->
