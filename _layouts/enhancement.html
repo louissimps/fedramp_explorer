@@ -23,11 +23,11 @@ layout: default
         </h5>
         <div class="card-body">
           <h5 class="card-title">Description:</h5>
-          <p class="card-text">{{ page.EnhancementText }}</p>
+          <p class="card-text">{{ page.EnhancementText | newline_to_br }}</p>
 
           {% if page.FedrampGuidance != empty %}
           <h5 class="card-title">Further Guidance</h5>
-          <p class="card-text">{{ page.FedrampGuidance }}</p>
+          <p class="card-text">{{ page.FedrampGuidance | newline_to_br }}</p>
           
           {% endif %}
         </div>
