@@ -1,3 +1,9 @@
 git clone git@github.com:louissimps/fedramp_explorer.git
 cd fedramp_explorer/
+cat _data/controls.json| jq '[.[] | . as $c | $c | $c.Enhancements[] as $e  |  {"ControlID": $c.ID, "ControlFamily": $c.Family, "ID": $e.ID, "ControlTitle": $c.TITLE, "EnhancementText": $e.ControlText, "FurtherGuidance": $e.FedrampGuidance, "Impacts": $e.Impacts }]' > _data/enhancements.json 
+
 jekyll serve
+
+
+
+

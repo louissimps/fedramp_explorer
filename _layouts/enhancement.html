@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h2>{{ page.TITLE }}</h2>
+<h2>{{ page.ControlTitle }}</h2>
 
 
 <div class="card">
@@ -23,16 +23,13 @@ layout: default
         </h5>
         <div class="card-body">
           <h5 class="card-title">Description:</h5>
-          <p class="card-text">{{ page.ControlText }}</p>
+          <p class="card-text">{{ page.EnhancementText }}</p>
 
           {% if page.FedrampGuidance != empty %}
           <h5 class="card-title">Further Guidance</h5>
           <p class="card-text">{{ page.FedrampGuidance }}</p>
           
           {% endif %}
-
-
-
         </div>
       </div>
     
