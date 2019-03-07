@@ -25,14 +25,53 @@ layout: default
           <h5 class="card-title">Description:</h5>
           <p class="card-text">{{ page.ControlText | newline_to_br }}</p>
 
+          {% if page.SupplementalGuidance != empty %}
+          <h5 class="card-title">Supplemental Guidance</h5>
+          <p class="card-text">{{ page.SupplementalGuidance | newline_to_br }}</p>
+          
+          {% endif %}
+          {% if page.Parameters.size > 0 %}
+          <h5 class="card-title">Parameters</h5>
+          <ul>
+            {% for x in page.Parameters %}
+            <li>
+            {% if x.Level == "High" %}
+            <span class="badge badge-pill badge-danger">H</span>
+            {% elsif x.Level == "Moderate" %}
+            <span class="badge badge-pill badge-warning">M</span>
+            
+            {% elsif x.Level == "Low" %}
+            <span class="badge badge-pill badge-success">L</span>
+            
+            {% endif %}
+              {{ x.Param }}
+
+            </li>
+              
+               {% endfor %}
+              </ul>
+          {% endif %}
+
+
+
           {% if page.FedrampGuidance != empty %}
-          <h5 class="card-title">Further Guidance</h5>
+          <h5 class="card-title">FEDRAMP Further Guidance</h5>
+          <p class="card-text">{{ page.FedrampGuidance | newline_to_br }}</p>
+          
+ 
+
           <p class="card-text">{{ page.FedrampGuidance | newline_to_br }}</p>
           
           {% endif %}
 
 
+          {% if page.RelatedControls.size > 0 %}
+          <h5 class="card-title">Related Controls:</h5>
 
+            {% for related_control in page.RelatedControls %}
+            <a href="/{{ related_control | datapage_url: 'controls' }}">{{related_control | upcase}}</a> 
+            {% endfor %}
+          {% endif %}
         </div>
       </div>
     

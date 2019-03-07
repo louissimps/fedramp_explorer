@@ -21,7 +21,7 @@
                 <ul id="control_search_list">
                     {% for control in site.data.controls %}
 
-                    <li><a href="/{{ control.TITLE | datapage_url: 'controls' }}">{{ control.ID }} {{ control.TITLE }}</a></li>
+                    <li><a href="/{{ control.ID | datapage_url: 'controls' }}">{{ control.ID }} {{ control.TITLE }}</a></li>
                     {% if control.Enhancements.size > 0 %}
                     {% for enhancement in control.Enhancements %}
                     <li><a href="/{{ enhancement.ID | datapage_url: 'enhancements' }}">{{enhancement.ID}}</a></li>
