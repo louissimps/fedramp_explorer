@@ -22,27 +22,77 @@ layout: default
 
         </h5>
         <div class="card-body">
-          <h5 class="card-title">Description:</h5>
-          <p class="card-text">{{ page.EnhancementText | newline_to_br }}</p>
+            <div class="card">
+                <h5 class="card-header">Description</h5>
+                <div class="card-body">
+                    <p class="card-text">{{ page.EnhancementText | newline_to_br }}</p>
+            
+              </div>
+            </div>
+              
+
+          {% if page.Parameters.size > 0 %}
+          <div class="card">
+            
+              <h5 class="card-header">Parameters</h5>
+              <div class="card-body">
+
+          <ul>
+            {% for x in page.Parameters %}
+            <li>
+            {% if x.Level == "High" %}
+            <span class="badge badge-pill badge-danger">H</span>
+            {% elsif x.Level == "Moderate" %}
+            <span class="badge badge-pill badge-warning">M</span>
+            
+            {% elsif x.Level == "Low" %}
+            <span class="badge badge-pill badge-success">L</span>
+            
+            {% endif %}
+              {{ x.Param }}
+
+            </li>
+              
+               {% endfor %}
+              </ul>
+              </div>
+          </div>
+
+          {% endif %}
+
 
           {% if page.SupplementalGuidance != empty %}
-          <h5 class="card-title">Supplemental Guidance</h5>
+          <div class="card">
+
+          <h5 class="card-header">Supplemental Guidance</h5>
+          <div class="card-body">
+
           <p class="card-text">{{ page.SupplementalGuidance | newline_to_br }}</p>
-          
+        </div>
+      </div>          
           {% endif %}
 
           {% if page.FedrampGuidance != empty %}
-          <h5 class="card-title">FEDRAMP Further Guidance</h5>
-          <p class="card-text">{{ page.FedrampGuidance | newline_to_br }}</p>
-          
+          <div class="card">
+            <h5 class="card-header">Further Guidance</h5>
+            <div class="card-body">
+
+            <p class="card-text">{{ page.FedrampGuidance | newline_to_br }}</p>
+          </div>
+        </div>        
           {% endif %}
           {% if page.RelatedControls.size > 0 %}
-          <h5 class="card-title">Related Controls:</h5>
+          <div class="card">
+
+          <h5 class="card-header">Related Controls</h5>
+          <div class="card-body">
 
             {% for related_control in page.RelatedControls %}
             <a href="/{{ related_control | datapage_url: 'controls' }}">{{related_control | upcase }}</a> 
             {% endfor %}
-          {% endif %}
+          </div>
+        </div>
+            {% endif %}
 
         </div>
       </div>
