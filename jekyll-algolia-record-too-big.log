@@ -1,0 +1,278 @@
+{
+  "html": "<p class=\"card-text\">The organization:<br>\n a. Identifies and selects the following types of information system accounts to support organizational missions/business functions: [Assignment: organization-defined information system account types];<br>\n b. Assigns account managers for information system accounts;<br>\n c. Establishes conditions for group and role membership;<br>\n d. Specifies authorized users of the information system, group and role membership, and access authorizations (i.e., privileges) and other attributes (as required) for each account;<br>\n e. Requires approvals by [Assignment: organization-defined personnel or roles] for requests to create information system accounts;<br>\n f. Creates, enables, modifies, disables, and removes information system accounts in accordance with [Assignment: organization-defined procedures or conditions];<br>\n g. Monitors the use of, information system accounts;<br>\n h. Notifies account managers:<br>\n   1. When accounts are no longer required;<br>\n   2. When users are terminated or transferred; and<br>\n   3. When individual information system usage or need-to-know changes;<br>\n i. Authorizes access to the information system based on:<br>\n   1. A valid access authorization;<br>\n   2. Intended system usage; and<br>\n   3. Other attributes as required by the organization or associated missions/business functions;<br>\n j. Reviews accounts for compliance with account management requirements [Assignment: organization-defined frequency]; and<br>\n k. Establishes a process for reissuing shared/group account credentials (if deployed) when individuals are removed from the group.<br>\n</p>",
+  "content": "The organization:\n a. Identifies and selects the following types of information system accounts to support organizational missions/business functions: [Assignment: organization-defined information system account types];\n b. Assigns account managers for information system accounts;\n c. Establishes conditions for group and role membership;\n d. Specifies authorized users of the information system, group and role membership, and access authorizations (i.e., privileges) and other attributes (as required) for each account;\n e. Requires approvals by [Assignment: organization-defined personnel or roles] for requests to create information system accounts;\n f. Creates, enables, modifies, disables, and removes information system accounts in accordance with [Assignment: organization-defined procedures or conditions];\n g. Monitors the use of, information system accounts;\n h. Notifies account managers:\n   1. When accounts are no longer required;\n   2. When users are terminated or transferred; and\n   3. When individual information system usage or need-to-know changes;\n i. Authorizes access to the information system based on:\n   1. A valid access authorization;\n   2. Intended system usage; and\n   3. Other attributes as required by the organization or associated missions/business functions;\n j. Reviews accounts for compliance with account management requirements [Assignment: organization-defined frequency]; and\n k. Establishes a process for reissuing shared/group account credentials (if deployed) when individuals are removed from the group.\n",
+  "headings": [
+    "ACCOUNT MANAGEMENT",
+    "Description"
+  ],
+  "custom_ranking": {
+    "position": 0,
+    "heading": 50
+  },
+  "title": "AC-2",
+  "ID": "AC-2",
+  "TITLE": "ACCOUNT MANAGEMENT",
+  "Family": "ACCESS CONTROL",
+  "ControlText": "The organization:\n a. Identifies and selects the following types of information system accounts to support organizational missions/business functions: [Assignment: organization-defined information system account types];\n b. Assigns account managers for information system accounts;\n c. Establishes conditions for group and role membership;\n d. Specifies authorized users of the information system, group and role membership, and access authorizations (i.e., privileges) and other attributes (as required) for each account;\n e. Requires approvals by [Assignment: organization-defined personnel or roles] for requests to create information system accounts;\n f. Creates, enables, modifies, disables, and removes information system accounts in accordance with [Assignment: organization-defined procedures or conditions];\n g. Monitors the use of, information system accounts;\n h. Notifies account managers:\n   1. When accounts are no longer required;\n   2. When users are terminated or transferred; and\n   3. When individual information system usage or need-to-know changes;\n i. Authorizes access to the information system based on:\n   1. A valid access authorization;\n   2. Intended system usage; and\n   3. Other attributes as required by the organization or associated missions/business functions;\n j. Reviews accounts for compliance with account management requirements [Assignment: organization-defined frequency]; and\n k. Establishes a process for reissuing shared/group account credentials (if deployed) when individuals are removed from the group.\n",
+  "Impacts": [
+    "High",
+    "Moderate",
+    "Low"
+  ],
+  "Enhancements": [
+    {
+      "ID": "AC-2 (1)",
+      "ControlText": "The organization employs automated mechanisms to support the management of information system accounts.\n\n",
+      "Impacts": [
+        "High",
+        "Moderate"
+      ],
+      "SupplementalGuidance": " The use of automated mechanisms can include, for example: using email or text messaging to automatically notify account managers when users are terminated or transferred; using the information system to monitor account usage; and using telephonic notification to report atypical system account usage.\n",
+      "RelatedControls": [
+
+      ],
+      "FedrampGuidance": "",
+      "Parameters": [
+
+      ]
+    },
+    {
+      "ID": "AC-2 (2)",
+      "ControlText": "The information system automatically [Selection: removes; disables] temporary and emergency accounts after [Assignment: organization-defined time period for each type of account].\n\n",
+      "Impacts": [
+        "High",
+        "Moderate"
+      ],
+      "SupplementalGuidance": " This control enhancement requires the removal of both temporary and emergency accounts automatically after a predefined period of time has elapsed, rather than at the convenience of the systems administrator.\n",
+      "RelatedControls": [
+
+      ],
+      "FedrampGuidance": "",
+      "Parameters": [
+        {
+          "Level": "High",
+          "Param": "AC-2 (2) [Selection: disables] \n[Assignment: 24 hours from last use]"
+        },
+        {
+          "Level": "Moderate",
+          "Param": "AC-2 (2) [no more than 30 days for temporary and emergency account types]"
+        }
+      ]
+    },
+    {
+      "ID": "AC-2 (3)",
+      "ControlText": "The information system automatically disables inactive accounts after [Assignment: organization-defined time period].\n",
+      "Impacts": [
+        "High",
+        "Moderate"
+      ],
+      "SupplementalGuidance": "",
+      "RelatedControls": [
+
+      ],
+      "FedrampGuidance": "AC-2 (3) Requirement: The service provider defines the time period for non-user accounts (e.g., accounts associated with devices).  The time periods are approved and accepted by the JAB/AO. Where user management is a function of the service, reports of activity of consumer users shall be made available.",
+      "Parameters": [
+        {
+          "Level": "High",
+          "Param": "AC-2 (3) [35 days for user accounts]"
+        },
+        {
+          "Level": "Moderate",
+          "Param": "AC-2 (3) [90 days for user accounts]"
+        }
+      ]
+    },
+    {
+      "ID": "AC-2 (4)",
+      "ControlText": "The information system automatically audits account creation, modification, enabling, disabling, and removal actions, and notifies [Assignment: organization-defined personnel or roles].\n\n",
+      "Impacts": [
+        "High",
+        "Moderate"
+      ],
+      "SupplementalGuidance": " ",
+      "RelatedControls": [
+        "au-2",
+        "au-12"
+      ],
+      "FedrampGuidance": "",
+      "Parameters": [
+        {
+          "Level": "High",
+          "Param": "AC-2 (4) [organization and/or service provider system owner]"
+        }
+      ]
+    },
+    {
+      "ID": "AC-2 (5)",
+      "ControlText": "The organization requires that users log out when [Assignment: organization-defined time-period of expected inactivity or description of when to log out].\n\n",
+      "Impacts": [
+        "High",
+        "Moderate"
+      ],
+      "SupplementalGuidance": " ",
+      "RelatedControls": [
+        "sc-23"
+      ],
+      "FedrampGuidance": "AC-2 (5) Guidance: Should use a shorter timeframe than AC-12.",
+      "Parameters": [
+        {
+          "Level": "High",
+          "Param": "AC-2 (5) [inactivity is anticipated to exceed Fifteen (15) minutes]"
+        }
+      ]
+    },
+    {
+      "ID": "AC-2 (7)",
+      "ControlText": "The organization:\n(a) Establishes and administers privileged user accounts in accordance with a role-based access scheme that organizes allowed information system access and privileges into roles;\n(b) Monitors privileged role assignments; and\n(c) Takes [Assignment: organization-defined actions] when privileged role assignments are no longer appropriate.\n\n",
+      "Impacts": [
+        "High",
+        "Moderate"
+      ],
+      "SupplementalGuidance": " Privileged roles are organization-defined roles assigned to individuals that allow those individuals to perform certain security-relevant functions that ordinary users are not authorized to perform. These privileged roles include, for example, key management, account management, network and system administration, database administration, and web administration.\n",
+      "RelatedControls": [
+
+      ],
+      "FedrampGuidance": "",
+      "Parameters": [
+        {
+          "Level": "High",
+          "Param": "AC-2 (7) (c) [disables/revokes access within a organization-specified timeframe]"
+        }
+      ]
+    },
+    {
+      "ID": "AC-2 (9)",
+      "ControlText": "The organization only permits the use of shared/group accounts that meet [Assignment: organization-defined conditions for establishing shared/group accounts].\n",
+      "Impacts": [
+        "High",
+        "Moderate"
+      ],
+      "SupplementalGuidance": "",
+      "RelatedControls": [
+
+      ],
+      "FedrampGuidance": "AC-2 (9) Required if shared/group accounts are deployed",
+      "Parameters": [
+        {
+          "Level": "High",
+          "Param": "AC-2 (9) [organization-defined need with justification statement that explains why such accounts are necessary]"
+        }
+      ]
+    },
+    {
+      "ID": "AC-2 (10)",
+      "ControlText": "The information system terminates shared/group account credentials when members leave the group.\n",
+      "Impacts": [
+        "High",
+        "Moderate"
+      ],
+      "SupplementalGuidance": "",
+      "RelatedControls": [
+
+      ],
+      "FedrampGuidance": "AC-2 (10) Required if shared/group accounts are deployed",
+      "Parameters": [
+
+      ]
+    },
+    {
+      "ID": "AC-2 (11)",
+      "ControlText": "The information system enforces [Assignment: organization-defined circumstances and/or usage conditions] for [Assignment: organization-defined information system accounts].\n\n",
+      "Impacts": [
+        "High"
+      ],
+      "SupplementalGuidance": " Organizations can describe the specific conditions or circumstances under which information system accounts can be used, for example, by restricting usage to certain days of the week, time of day, or specific durations of time.\n",
+      "RelatedControls": [
+
+      ],
+      "FedrampGuidance": "",
+      "Parameters": [
+
+      ]
+    },
+    {
+      "ID": "AC-2 (12)",
+      "ControlText": "The organization:\n (a) Monitors information system accounts for [Assignment: organization-defined atypical use]; and\n (b) Reports atypical usage of information system accounts to [Assignment: organization-defined personnel or roles].\n\n",
+      "Impacts": [
+        "High",
+        "Moderate"
+      ],
+      "SupplementalGuidance": " Atypical usage includes, for example, accessing information systems at certain times of the day and from locations that are not consistent with the normal usage patterns of individuals working in organizations. ",
+      "RelatedControls": [
+        "ca-7"
+      ],
+      "FedrampGuidance": "AC-2 (12)(a) Guidance: Required for privileged accounts.\nAC-2 (12)(b) Guidance: Required for privileged accounts.",
+      "Parameters": [
+        {
+          "Level": "High",
+          "Param": "AC-2 (12) (b)[at a minimum, the ISSO and/or similar role within the organization]"
+        }
+      ]
+    },
+    {
+      "ID": "AC-2 (13)",
+      "ControlText": "The organization disables accounts of users posing a significant risk within [Assignment: organization-defined time period] of discovery of the risk.\n\n",
+      "Impacts": [
+        "High"
+      ],
+      "SupplementalGuidance": " Users posing a significant risk to organizations include individuals for whom reliable evidence or intelligence indicates either the intention to use authorized access to information systems to cause harm or through whom adversaries will cause harm. Harm includes potential adverse impacts to organizational operations and assets, individuals, other organizations, or the Nation. Close coordination between authorizing officials, information system administrators, and human resource managers is essential in order for timely execution of this control enhancement. ",
+      "RelatedControls": [
+        "ps-4"
+      ],
+      "FedrampGuidance": "",
+      "Parameters": [
+        {
+          "Level": "High",
+          "Param": "AC-2 (13) [one (1) hour]"
+        }
+      ]
+    }
+  ],
+  "RelatedControls": [
+    "ac-3",
+    "ac-4",
+    "ac-5",
+    "ac-6",
+    "ac-10",
+    "ac-17",
+    "ac-19",
+    "ac-20",
+    "au-9",
+    "ia-2",
+    "ia-4",
+    "ia-5",
+    "ia-8",
+    "cm-5",
+    "cm-6",
+    "cm-11",
+    "ma-3",
+    "ma-4",
+    "ma-5",
+    "pl-4",
+    "sc-13"
+  ],
+  "SupplementalGuidance": " Information system account types include individual, shared, group, system, guest/anonymous, emergency, developer/manufacturer/vendor, temporary, and service. Some of the account management requirements listed above can be implemented by organizational information systems. The identification of authorized users of the information system and the specification of access privileges reflects the requirements in other security controls in the security plan. Users requiring administrative privileges on information system accounts receive additional scrutiny by appropriate organizational personnel (e.g., system owner, mission/business owner, or chief information security officer) responsible for approving such accounts and privileged access. Organizations may choose to define access privileges or other attributes by account, by type of account, or a combination of both. Other attributes required for authorizing access include, for example, restrictions on time-of-day, day-of-week, and point-of-origin. In defining other account attributes, organizations consider system-related requirements (e.g., scheduled maintenance, system upgrades) and mission/business requirements, (e.g., time zone differences, customer requirements, remote access to support travel requirements). Failure to consider these factors could affect information system availability. Temporary and emergency accounts are accounts intended for short-term use. Organizations establish temporary accounts as a part of normal account activation procedures when there is a need for short-term accounts without the demand for immediacy in account activation. Organizations establish emergency accounts in response to crisis situations and with the need for rapid account activation. Therefore, emergency account activation may bypass normal account authorization processes. Emergency and temporary accounts are not to be confused with infrequently used accounts (e.g., local logon accounts used for special tasks defined by organizations or when network resources are unavailable). Such accounts remain available and are not subject to automatic disabling or removal dates. Conditions for disabling or deactivating accounts include, for example: (i) when shared/group, emergency, or temporary accounts are no longer required; or (ii) when individuals are transferred or terminated. Some types of information system accounts may require specialized training. ",
+  "Parameters": [
+    {
+      "Level": "High",
+      "Param": "AC-2 (j) [monthly for privileged accessed, every six (6) months for non-privileged access] "
+    },
+    {
+      "Level": "Moderate",
+      "Param": "AC-2 (j) [at least annually]"
+    },
+    {
+      "Level": "Low",
+      "Param": "AC-2 (j) [at least annually]"
+    }
+  ],
+  "tags": [
+
+  ],
+  "categories": [
+
+  ],
+  "slug": "ac-2",
+  "type": "datapage",
+  "url": "/controls/ac-2.html"
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ site.title }}</title>
+    <title>{{ page.ID }}</title>
 
     <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -17,8 +17,18 @@
 
             <div class="col-4">
                 <a href="/">HOME</a>
-                <input class="form-control" id="control_search_txt" type="text" placeholder="Search..">
-                <ul id="control_search_list">
+                <br/>
+                <div class="card">
+                    <div class="card-body"><input type="text" id="search-input" placeholder="search controls..">
+                        <div id="results-container"></div>                    
+                    </div>
+                </div>
+
+                
+                
+                
+                <div class="card">
+                    <ul id="control_search_list">
                     {% for control in site.data.controls %}
 
                     <li><a href="/{{ control.ID | datapage_url: 'controls' }}">{{ control.ID }} {{ control.TITLE }}</a></li>
@@ -30,6 +40,7 @@
                     {% endif %}
                     {% endfor %}
                 </ul>
+                </div>
             </div>
             <div class="col-8">
 
@@ -45,16 +56,15 @@
                 crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
                 crossorigin="anonymous"></script>
+                <script src="https://unpkg.com/simple-jekyll-search@1.5.0/dest/simple-jekyll-search.min.js"></script>
 
                 <script>
-                    $(document).ready(function(){
-                      $("#control_search_txt").on("keyup", function() {
-                        var value = $(this).val().toLowerCase();
-                        $("#control_search_list *").filter(function() {
-                          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                        });
-                      });
-                    });
+                    var sjs = SimpleJekyllSearch({
+                      searchInput: document.getElementById('search-input'),
+                      resultsContainer: document.getElementById('results-container'),
+                      json: '/search.json',
+                      searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
+                    })
                     </script>
 
             </body>

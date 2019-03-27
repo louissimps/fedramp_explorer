@@ -1,0 +1,169 @@
+---
+---
+[
+    {
+        "url": "/controls/ac-11.html", 
+        "text": "The information system:\n a. Prevents further access to the system by initiating a session lock after [Assignment: organization-defined time period] of inactivity or upon receiving a request from a user; and\n b. Retains the session lock until the user reestablishes access using established identification and authentication procedures.\n\n", 
+        "title": "AC-11"
+    }, 
+    {
+        "url": "/controls/ac-2.html", 
+        "text": "The organization:\n a. Identifies and selects the following types of information system accounts to support organizational missions/business functions: [Assignment: organization-defined information system account types];\n b. Assigns account managers for information system accounts;\n c. Establishes conditions for group and role membership;\n d. Specifies authorized users of the information system, group and role membership, and access authorizations (i.e., privileges) and other attributes (as required) for each account;\n e. Requires approvals by [Assignment: organization-defined personnel or roles] for requests to create information system accounts;\n f. Creates, enables, modifies, disables, and removes information system accounts in accordance with [Assignment: organization-defined procedures or conditions];\n g. Monitors the use of, information system accounts;\n h. Notifies account managers:\n   1. When accounts are no longer required;\n   2. When users are terminated or transferred; and\n   3. When individual information system usage or need-to-know changes;\n i. Authorizes access to the information system based on:\n   1. A valid access authorization;\n   2. Intended system usage; and\n   3. Other attributes as required by the organization or associated missions/business functions;\n j. Reviews accounts for compliance with account management requirements [Assignment: organization-defined frequency]; and\n k. Establishes a process for reissuing shared/group account credentials (if deployed) when individuals are removed from the group.\n", 
+        "title": "AC-2"
+    }, 
+    {
+        "url": "/controls/ac-3.html", 
+        "text": "The information system enforces approved authorizations for logical access to information and system resources in accordance with applicable access control policies.\n\n", 
+        "title": "AC-3"
+    }, 
+    {
+        "url": "/controls/ac-10.html", 
+        "text": " The information system limits the number of concurrent sessions for each [Assignment: organization-defined account and/or account type] to [Assignment: organization-defined number].\n\n", 
+        "title": "AC-10"
+    }, 
+    {
+        "url": "/controls/ac-4.html", 
+        "text": "The information system enforces approved authorizations for controlling the flow of information within the system and between interconnected systems based on [Assignment: organization-defined information flow control policies].\n\n", 
+        "title": "AC-4"
+    }, 
+    {
+        "url": "/controls/ac-8.html", 
+        "text": "The information system:\n a. Displays to users [Assignment: organization-defined system use notification message or banner] before granting access to the system that provides privacy and security notices consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance and states that:\n   1. Users are accessing a U.S. Government information system;\n   2. Information system usage may be monitored, recorded, and subject to audit;\n   3. Unauthorized use of the information system is prohibited and subject to criminal and civil penalties; and\n   4. Use of the information system indicates consent to monitoring and recording;\n b. Retains the notification message or banner on the screen until users acknowledge the usage conditions and take explicit actions to log on to or further access the information system; and \n c. For publicly accessible systems:\n   1. Displays system use information [Assignment: organization-defined conditions], before granting further access;\n   2. Displays references, if any, to monitoring, recording, or auditing that are consistent with privacy accommodations for such systems that generally prohibit those activities; and\n   3. Includes a description of the authorized uses of the system.\n\n", 
+        "title": "AC-8"
+    }, 
+    {
+        "url": "/controls/ac-5.html", 
+        "text": "The organization:\n a. Separates [Assignment: organization-defined duties of individuals];\n b. Documents separation of duties of individuals; and\n c. Defines information system access authorizations to support separation of duties.\n\n", 
+        "title": "AC-5"
+    }, 
+    {
+        "url": "/controls/ac-6.html", 
+        "text": "The organization employs the principle of least privilege, allowing only authorized accesses for users (or processes acting on behalf of users) which are necessary to accomplish assigned tasks in accordance with organizational missions and business functions.\n\n", 
+        "title": "AC-6"
+    }, 
+    {
+        "url": "/controls/ac-7.html", 
+        "text": "The information system:\n a. Enforces a limit of [Assignment: organization-defined number] consecutive invalid logon attempts by a user during a [Assignment: organization-defined time period]; and\n b. Automatically [Selection: locks the account/node for an [Assignment: organization-defined time period]; locks the account/node until released by an administrator; delays next logon prompt according to [Assignment: organization-defined delay algorithm]] when the maximum number of unsuccessful attempts is exceeded.\n\n", 
+        "title": "AC-7"
+    }, 
+    {
+        "url": "/controls/ac-1.html", 
+        "text": "The organization:\n a. Develops, documents, and disseminates to [Assignment: organization-defined personnel or roles]:\n   1. An access control policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and\n   2. Procedures to facilitate the implementation of the access control policy and associated access controls; and\n b. Reviews and updates the current:\n   1. Access control policy [Assignment: organization-defined frequency]; and\n   2. Access control procedures [Assignment: organization-defined frequency].\n\n", 
+        "title": "AC-1"
+    }, 
+    {
+        "url": "/enhancements/ac-2-9.html", 
+        "text": "The organization only permits the use of shared/group accounts that meet [Assignment: organization-defined conditions for establishing shared/group accounts].\n", 
+        "title": "AC-2 (9)"
+    }, 
+    {
+        "url": "/enhancements/ac-6-2.html", 
+        "text": "The organization requires that users of information system accounts, or roles, with access to [Assignment: organization-defined security functions or security-relevant information], use non- privileged accounts or roles, when accessing nonsecurity functions.\n\n", 
+        "title": "AC-6 (2)"
+    }, 
+    {
+        "url": "/enhancements/ac-2-5.html", 
+        "text": "The organization requires that users log out when [Assignment: organization-defined time-period of expected inactivity or description of when to log out].\n\n", 
+        "title": "AC-2 (5)"
+    }, 
+    {
+        "url": "/enhancements/ac-2-4.html", 
+        "text": "The information system automatically audits account creation, modification, enabling, disabling, and removal actions, and notifies [Assignment: organization-defined personnel or roles].\n\n", 
+        "title": "AC-2 (4)"
+    }, 
+    {
+        "url": "/enhancements/ac-6-3.html", 
+        "text": "The organization authorizes network access to [Assignment: organization-defined privileged commands] only for [Assignment: organization-defined compelling operational needs] and documents the rationale for such access in the security plan for the information system.\n\n", 
+        "title": "AC-6 (3)"
+    }, 
+    {
+        "url": "/enhancements/ac-11-1.html", 
+        "text": "The information system conceals, via the session lock, information previously visible on the display with a publicly viewable image.\n\n", 
+        "title": "AC-11 (1)"
+    }, 
+    {
+        "url": "/enhancements/ac-2-10.html", 
+        "text": "The information system terminates shared/group account credentials when members leave the group.\n", 
+        "title": "AC-2 (10)"
+    }, 
+    {
+        "url": "/enhancements/ac-2-3.html", 
+        "text": "The information system automatically disables inactive accounts after [Assignment: organization-defined time period].\n", 
+        "title": "AC-2 (3)"
+    }, 
+    {
+        "url": "/enhancements/ac-6-8.html", 
+        "text": "The information system prevents [Assignment: organization-defined software] from executing at higher privilege levels than users executing the software.\n\n", 
+        "title": "AC-6 (8)"
+    }, 
+    {
+        "url": "/enhancements/ac-6-9.html", 
+        "text": "The information system audits the execution of privileged functions.\n\n", 
+        "title": "AC-6 (9)"
+    }, 
+    {
+        "url": "/enhancements/ac-4-8.html", 
+        "text": "The information system enforces information flow control using [Assignment: organization-defined security policy filters] as a basis for flow control decisions for [Assignment: organization-defined information flows].\n\n", 
+        "title": "AC-4 (8)"
+    }, 
+    {
+        "url": "/enhancements/ac-2-2.html", 
+        "text": "The information system automatically [Selection: removes; disables] temporary and emergency accounts after [Assignment: organization-defined time period for each type of account].\n\n", 
+        "title": "AC-2 (2)"
+    }, 
+    {
+        "url": "/enhancements/ac-6-5.html", 
+        "text": "The organization restricts privileged accounts on the information system to [Assignment:\norganization-defined personnel or roles].\n\n", 
+        "title": "AC-6 (5)"
+    }, 
+    {
+        "url": "/enhancements/ac-2-11.html", 
+        "text": "The information system enforces [Assignment: organization-defined circumstances and/or usage conditions] for [Assignment: organization-defined information system accounts].\n\n", 
+        "title": "AC-2 (11)"
+    }, 
+    {
+        "url": "/enhancements/ac-2-1.html", 
+        "text": "The organization employs automated mechanisms to support the management of information system accounts.\n\n", 
+        "title": "AC-2 (1)"
+    }, 
+    {
+        "url": "/enhancements/ac-7-2.html", 
+        "text": "The information system purges/wipes information from [Assignment: organization-defined mobile devices] based on [Assignment: organization-defined purging/wiping requirements/techniques] after [Assignment: organization-defined number] consecutive, unsuccessful device logon attempts.\n\n", 
+        "title": "AC-7 (2)"
+    }, 
+    {
+        "url": "/enhancements/ac-6-10.html", 
+        "text": "The information system prevents non-privileged users from executing privileged functions to include disabling, circumventing, or altering implemented security safeguards/countermeasures.\n\n", 
+        "title": "AC-6 (10)"
+    }, 
+    {
+        "url": "/enhancements/ac-2-12.html", 
+        "text": "The organization:\n (a) Monitors information system accounts for [Assignment: organization-defined atypical use]; and\n (b) Reports atypical usage of information system accounts to [Assignment: organization-defined personnel or roles].\n\n", 
+        "title": "AC-2 (12)"
+    }, 
+    {
+        "url": "/enhancements/ac-4-21.html", 
+        "text": "The information system separates information flows logically or physically using [Assignment: organization-defined mechanisms and/or techniques] to accomplish [Assignment: organization- defined required separations by types of information].\n\n", 
+        "title": "AC-4 (21)"
+    }, 
+    {
+        "url": "/enhancements/ac-2-13.html", 
+        "text": "The organization disables accounts of users posing a significant risk within [Assignment: organization-defined time period] of discovery of the risk.\n\n", 
+        "title": "AC-2 (13)"
+    }, 
+    {
+        "url": "/enhancements/ac-6-7.html", 
+        "text": "The organization:\n (a)   Reviews [Assignment: organization-defined frequency] the privileges assigned to [Assignment: organization-defined roles or classes of users] to validate the need for such privileges; and\n (b)   Reassigns or removes privileges, if necessary, to correctly reflect organizational mission/business needs.\n\n", 
+        "title": "AC-6 (7)"
+    }, 
+    {
+        "url": "/enhancements/ac-2-7.html", 
+        "text": "The organization:\n(a) Establishes and administers privileged user accounts in accordance with a role-based access scheme that organizes allowed information system access and privileges into roles;\n(b) Monitors privileged role assignments; and\n(c) Takes [Assignment: organization-defined actions] when privileged role assignments are no longer appropriate.\n\n", 
+        "title": "AC-2 (7)"
+    }, 
+    {
+        "url": "/enhancements/ac-6-1.html", 
+        "text": "The organization explicitly authorizes access to [Assignment: organization-defined security functions (deployed in hardware, software, and firmware) and security-relevant information].\n\n", 
+        "title": "AC-6 (1)"
+    }
+]

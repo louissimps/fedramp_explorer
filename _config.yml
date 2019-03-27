@@ -13,6 +13,13 @@ page_gen:
     name: 'ID'
     dir: 'enhancements'
 
+algolia:
+  application_id: 'TEMKLFF1N6'
+  index_name: fedramp_search
+  max_record_size: 10_000
+  extensions_to_index:
+    - html  
+
 
 sass:
   sass_dir: css
