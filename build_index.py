@@ -25,10 +25,15 @@ for root, directories, filenames in os.walk('./_site/controls'):
         if(filename.endswith('.html')):
             with open(os.path.join(root,filename),'r') as f:
                 soup = BeautifulSoup(f.read(), features="lxml")
+                dude = []
+                ps = soup.find_all('p', class_='card-text')
+                for para in ps:
+                    dude.append(para.get_text())
+
                 records.append({
                     "title": soup.title.get_text(),
                     "url": '/controls/' + filename,
-                    "text": soup.p.get_text()
+                    "text": ' '.join(dude).strip()
 
                 }
                 )
@@ -41,10 +46,13 @@ for root, directories, filenames in os.walk('./_site/enhancements'):
         if(filename.endswith('.html')):
             with open(os.path.join(root,filename),'r') as f:
                 soup = BeautifulSoup(f.read(), features="lxml")
+                dude = []
+                for para in soup.find_all('p', class_='card-text'):
+                    dude.append(para.get_text())
                 records.append({
                     "title": soup.title.get_text(),
                     "url": '/enhancements/'+filename,
-                    "text": soup.p.get_text()
+                    "text": ' '.join(dude).strip()
 
                 }
                 )
