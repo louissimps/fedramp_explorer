@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h2>{{ page.ControlTitle }}</h2>
+<h2>{{ page.ID }}</h2>
 
 
 <div class="card">
@@ -70,6 +70,18 @@ layout: default
           <p class="card-text">{{ page.SupplementalGuidance | newline_to_br }}</p>
         </div>
       </div>          
+          {% endif %}
+          {% if page.IaseGuidance %}
+          {% if page.IaseGuidance != empty %}
+          <div class="card">
+              <h5 class="card-header">IASE Guidance</h5>
+              <div class="card-body">
+
+          <p class="card-text">{{ page.IaseGuidance | newline_to_br }}</p>
+        </div>
+      </div>
+      
+          {% endif %}
           {% endif %}
 
           {% if page.FedrampGuidance != empty %}

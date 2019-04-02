@@ -5,7 +5,7 @@ Go get the appropriate version of the controls file from the parser project
 cp ../fedramp_parser/output/controls.json _data
 
 Generate the Enhancements dataset
-cat _data/controls.json | jq '[.[] | . as $c | $c | $c.Enhancements[] as $e  |  {"ControlID": $c.ID, "ControlFamily": $c.Family, "ID": $e.ID, "ControlTitle": $c.TITLE, "EnhancementText": $e.ControlText, "FedrampGuidance": $e.FedrampGuidance, "SupplementalGuidance": $e.SupplementalGuidance, "Impacts": $e.Impacts, "RelatedControls": $e.RelatedControls, "Parameters": $e.Parameters }]' > _data/enhancements.json 
+cat _data/controls.json | jq '[.[] | . as $c | $c | $c.Enhancements[] as $e  |  {"ControlID": $c.ID, "ControlFamily": $c.Family, "ID": $e.ID, "ControlTitle": $c.TITLE, "EnhancementText": $e.ControlText, "IaseGuidance": $e.IaseGuidance, "FedrampGuidance": $e.FedrampGuidance, "SupplementalGuidance": $e.SupplementalGuidance, "Impacts": $e.Impacts, "RelatedControls": $e.RelatedControls, "Parameters": $e.Parameters }]' > _data/enhancements.json 
 
 
 
