@@ -1,13 +1,14 @@
 import os, json, re
 from bs4 import BeautifulSoup
+import urllib3
 
 records = []
 
-# with open("./_data/controls.json", "r") as read_file:
-#     controls_data = json.load(read_file)
+with open("./_data/controls.json", "r") as read_file:
+    controls_data = json.load(read_file)
 
-# with open("./_data/enhancements.json", "r") as read_file:
-#     enhancements_data = json.load(read_file)
+with open("./_data/enhancements.json", "r") as read_file:
+    enhancements_data = json.load(read_file)
 
 
 def visible(element):
@@ -57,6 +58,4 @@ for root, directories, filenames in os.walk('./_site/enhancements'):
                 }
                 )
 with open("./search.json", "w") as data_file:
-    data_file.write('---\n')
-    data_file.write('---\n')
     json.dump(records, data_file, indent=4)
