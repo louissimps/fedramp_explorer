@@ -13,8 +13,7 @@ jekyll serve
 
 to deploy to aws
 jekyll build 
-aws s3 sync _site/ s3://[YOUR_BUCKET_NAME]/
-
+aws s3 sync _site/ s3://fedramp-explorer/ 
 
 
 
