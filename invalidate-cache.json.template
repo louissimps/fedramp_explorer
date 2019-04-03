@@ -1,0 +1,12 @@
+{
+    "DistributionId": "EKEAM2WOIJYOL", 
+    "InvalidationBatch": {
+        "Paths": {
+            "Quantity": 1, 
+            "Items": [
+                "/*"
+            ]
+        }, 
+        "CallerReference": "cref"
+    }
+}
